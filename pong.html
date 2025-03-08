@@ -133,7 +133,7 @@ w<!DOCTYPE html>
       leftPaddleY = Math.max(0, Math.min(canvas.height - paddleHeight, leftPaddleY));
       
       // 右のパドルをAIが操作
-      const aiSpeed = 2;
+      const aiSpeed = 4;
       if (ballY < rightPaddleY + paddleHeight / 2) {
         rightPaddleSpeed = -aiSpeed;
       } else if (ballY > rightPaddleY + paddleHeight / 2) {
