@@ -91,18 +91,18 @@
 
     // ボールの移動
     function moveBall() {
-      ballX += ballSpeedX*10;
-      ballY += ballSpeedY*10;
+      ballX += ballSpeedX;
+      ballY += ballSpeedY;
 
       // 壁に当たると反射
       if (ballY - ballRadius < 0 || ballY + ballRadius > canvas.height) ballSpeedY = -ballSpeedY;
 
       // パドルに当たると反射
       if (ballX - ballRadius < paddleWidth && ballY > leftPaddleY && ballY < leftPaddleY + paddleHeight) {
-        ballSpeedX = -ballSpeedX;
+        ballSpeedX = -ballSpeedX*10;
       }
       if (ballX + ballRadius > canvas.width - paddleWidth && ballY > rightPaddleY && ballY < rightPaddleY + paddleHeight) {
-        ballSpeedX = -ballSpeedX;
+        ballSpeedX = -ballSpeedX*10;
       }
 
       // スコア判定
