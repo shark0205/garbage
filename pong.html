@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+w<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -99,10 +99,10 @@
 
       // パドルに当たると反射
       if (ballX - ballRadius < paddleWidth && ballY > leftPaddleY && ballY < leftPaddleY + paddleHeight) {
-        ballSpeedX = -ballSpeedX*1.1;
+        ballSpeedX = -ballSpeedX*10%;
       }
       if (ballX + ballRadius > canvas.width - paddleWidth && ballY > rightPaddleY && ballY < rightPaddleY + paddleHeight) {
-        ballSpeedX = -ballSpeedX*1.1;
+        ballSpeedX = -ballSpeedX*10%;
       }
 
       // スコア判定
@@ -133,7 +133,7 @@
       leftPaddleY = Math.max(0, Math.min(canvas.height - paddleHeight, leftPaddleY));
       
       // 右のパドルをAIが操作
-      const aiSpeed = 4;
+      const aiSpeed = 2;
       if (ballY < rightPaddleY + paddleHeight / 2) {
         rightPaddleSpeed = -aiSpeed;
       } else if (ballY > rightPaddleY + paddleHeight / 2) {
