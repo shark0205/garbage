@@ -91,8 +91,8 @@
 
     // ボールの移動
     function moveBall() {
-      ballX += ballSpeedX;
-      ballY += ballSpeedY;
+      ballX += ballSpeedX*10;
+      ballY += ballSpeedY*10;
 
       // 壁に当たると反射
       if (ballY - ballRadius < 0 || ballY + ballRadius > canvas.height) ballSpeedY = -ballSpeedY;
