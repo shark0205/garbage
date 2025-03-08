@@ -99,10 +99,10 @@ w<!DOCTYPE html>
 
       // パドルに当たると反射
       if (ballX - ballRadius < paddleWidth && ballY > leftPaddleY && ballY < leftPaddleY + paddleHeight) {
-        ballSpeedX = -ballSpeedX*1.001;
+        ballSpeedX = -ballSpeedX;
       }
       if (ballX + ballRadius > canvas.width - paddleWidth && ballY > rightPaddleY && ballY < rightPaddleY + paddleHeight) {
-        ballSpeedX = -ballSpeedX*1.001;
+        ballSpeedX = -ballSpeedX;
       }
 
       // スコア判定
